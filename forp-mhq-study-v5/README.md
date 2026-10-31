@@ -1,32 +1,28 @@
-# FORP-TR · V5 Peer-review revision (31 October 2026)
+# FORP-TR V5 · Major Revision: preregisterable prospective psychiatry protocol
 
-**Status: proposed clinical study. No recruitment, ethics approval, OSF registration or empirical results.**
+**Version:** 5.0 (31 October 2026). **Status:** Proposed research design, **not an approved or conducted clinical study**. No results of simulated participants appear as clinical findings.
 
-## Prespecified clinical question
-Does baseline fear of recurrence (FORP-MHQ; per 10 score points) show an adjusted association with WHO-5 psychological well-being at 6 months among adult psychiatric outpatients?
+## What changed since V4
 
-## Eight material changes
-1. Simulated cohort effects have been removed from clinical abstract/results/discussion; methods-only Monte Carlo planning is in Appendix A.
-2. Monte Carlo planning (500 replications/scenario; seed 20261031; N=400–1000; partial R²=0/.01/.02; MCAR/MAR/MNAR). N=700 gives ~89.6% power if partial R²=.02 and 20% attrition; for .01, ~58.4%. This is conditional, not observed evidence.
-3. Primary model adjusts for baseline WHO-5, PHQ-9, GAD-7, age, sex, diagnosis family, log illness duration, prior episode burden, baseline treatment category, baseline remission and site if applicable.
-4. Adaptation/cognitive debriefing/pilot are separate from primary cohort participants. Translation authorization remains pending.
-5. Restricted cubic spline (baseline FORP 10th/50th/90th percentiles) prespecified as secondary nonlinearity analysis; U-shaped inference cannot be based on a spline p value alone.
-6. Diagnosis-specific new episodes and active-disease worsening are separate secondary endpoints, adjudicated by two psychiatrists blinded to baseline FORP and cultural responses.
-7. Prepared OSF registration text and STROBE/COSMIN/COREQ reporting crosswalk; OSF has NOT been submitted.
-8. Professional Turkish thesis proposal, English prospective protocol, patient forms and presentation, with academic language and clearly scoped limitations.
+1. All previously generated cohort effects were removed from the main clinical text; Monte Carlo **design only** now lives in `appendices/Ek_A_Monte_Carlo.md`, with a reproducible script.
+2. Monte Carlo sample sizing includes predeclared confounders, HC3 robust regression, observed-score boundaries, 20% attrition and MAR/MCAR/MNAR sensitivity. N=700 is recommended for the specified effect; subgroups are exploratory.
+3. PHQ-4 is replaced by PHQ-9 + GAD-7. Illness duration, episodes, baseline treatment, clinical remission, and centre if applicable are required baseline covariates.
+4. Translation/pilot is separate from main cohort: none of its participants enters the primary clinical analysis; outcome-blinded baseline psychometrics follows.
+5. Restricted cubic spline nonlinearity with 3 prespecified knots is secondary, no data-driven cut-off.
+6. Diagnosis-specific clinical episodes have two blinded clinician ratings and third-adjudicator disagreement resolution; WHO-5 is not relapse.
+7. A fully populated *draft* OSF preregistration plus STROBE/COSMIN 2.0 crosswalk is ready. **OSF submission has not occurred.**
+8. Formal language, consistent terminology and refined document layout in Turkish and English.
 
-## Key design
-- 700 enrolled, ~560 completing month 6 (assumed 20% loss)
-- 37 patient item responses at baseline, 5 WHO-5 items at months 3/6
-- 15–20 cognitive interviews and 30–40 pilot participants separately
-- 70–90 retest volunteers; 24–30 explanatory cultural interviews
-- Primary HC3 robust linear regression; multiple-imputation/IPW/MNAR sensitivity
-- Diagnosis-specific clinical event criteria and blinded review
+## Key files
 
-**Full dated research bundle:** Download the V5 ZIP supplied in the ChatGPT conversation. This GitHub directory initially contains the protocol summary, preregistration outline and methodological assumptions; the ZIP holds complete editable DOCX, PDFs, Python, R, data-free scripts and slides. No individual patient data are or should be published in GitHub.
+- `protocol/FORP_TR_V5_Nihai_Protokol_ve_SAP.md` · Turkish full protocol and SAP.
+- `thesis/Tez_Onerisi_V5.md` · revised thesis proposal.
+- `manuscript/FORP_V5_Prospective_Protocol_EN.md` · international-journal structured protocol.
+- `appendices/Ek_A_Monte_Carlo.md` · only location for simulations and hypothetical data-generating assumptions.
+- `analysis/monte_carlo_power.py` · reproducible power experiment; seed 20261031.
+- `checklists/STROBE_COSMIN_Uyum_Matrisi.md` · reporting audit against original official checklists.
+- `registration/OSF_ON_KAYIT_TASLAGI.md` · OSF registration-ready content, not registered.
+- `forms/Kisa_Hasta_Formu_V5.md` · 37 baseline patient responses; five at follow-up.
+- `forms/Nuks_Kor_Degerlendirme_El_Kitabi.md` · blinded diagnosis-specific endpoint definitions.
 
-Scientific sources:
-- https://doi.org/10.1111/bjc.12536
-- https://doi.org/10.1007/s11136-025-03950-x
-- https://www.strobe-statement.org/checklists/
-- https://help.osf.io/article/330-welcome-to-registrations
+**Scientific limitations:** Selected partial R² and generated covariate distributions are assumptions, not empirical estimates; model sensitivity to MNAR remains substantial. Translation permission, ethics/site approval, OSF registration and real participant data are mandatory before clinical inference.

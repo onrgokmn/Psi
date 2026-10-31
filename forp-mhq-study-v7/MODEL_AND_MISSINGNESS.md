@@ -1,0 +1,7 @@
+# FORP-TR V7 | Fixed statistical model and missing-data plan
+Outcome WHO5_T6. Exposure beta_1 for FORP_MHQ_total / 10. Adjusters: WHO5_T0, PHQ9_T0, GAD7_T0, age_10, sex_design binary term [real-world coding review required before preregistration], primary diagnosis anxiety vs depression, log1p disease duration years, prior episode burden 0/1/2+, treatment no tx / medication alone / psychotherapy +/- medication (2 indicators), remission yes/no, centre2 indicator.
+14 parameters total: intercept + primary exposure + 12 covariate degrees of freedom.
+Primary inference planned: 40 chained imputations (MICE), Rubin pooling, condition on MAR, use T3 WHO5 and post-baseline clinical safety intervention as auxiliary variables, never adjust for intervention as baseline confounder. FORP exposure must be observed, scored, and pass measurement gate.
+Missing outcome sensitivity: HC3 complete cases, inverse-probability weighting and FORP-dependent pattern-mixture delta_i = delta_0 + delta_1*z(FORP); delta_0=0,-5,-10; delta_1=0,-3,-6; tipping-point report.
+Three-knot (10th/50th/90th percentile) restricted cubic spline, exploratory, without dedicated power. Diagnostic subgroup interactions exploratory.
+No results in this repository folder are from human participants. Original Turkish copyrighted questionnaire item text is not publicly reproduced.

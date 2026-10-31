@@ -1,25 +1,37 @@
-# FORP-TR V6 | Prospective psychiatry protocol
+# FORP-TR V6 | Hakem revizyonu ve prospektif araştırma protokolü
 
-**Planned, not performed.** No patient data, ethics approval, scale translation authorization, OSF registration or clinical outcome analyses are claimed.
+**Durum: Planlanan tıpta uzmanlık tezi; yapılmış klinik araştırma değildir.** Etik kurul onayı, Türkçe FORP-MHQ kullanım/uyarlama izni ve OSF ön kaydı henüz alınmadı. Simülasyon verileri klinik bulgu olarak sunulmamalıdır.
 
-## Revision status
+## Önceden belirlenen araştırma
 
-- **Primary endpoint:** 6-month WHO-5 adjusted difference per 10 baseline FORP-MHQ points.
-- **Planning denominator:** approximately **n=560 with observed T6 measurements** after enrolling N=700 and assuming 20% attrition.
-- **Power simulations:** 500 replicate complete-case benchmark (N=700, 89.6% power for partial R²=.02); supplemental approximate 300-replicate MAR multiple-imputation scenario (91.7%, Monte Carlo SE 1.6 percentage points) **does not identically mimic the actual 40-imputation MICE analysis**.
-- **Effect mapping:** assumed partial R²=.02 corresponds to β≈−2.908 WHO-5 points per 10 FORP points **under the simulated residual variance**; it is not an empirical estimate.
-- **Primary missingness strategy:** 40 chained-equation multiple imputations under MAR, pooled via Rubin's rules; CCA HC3, IPW and MNAR deltas are sensitivity analyses.
-- **Clinical interpretation:** historical WHO-5 10/100-point within-person benchmark is not a universal MCID nor a threshold for the between-person coefficient (Topp 2015; Domenech 2025).
-- **Pre-specified but unpowered exploratory analyses:** nonlinear three-knot restricted cubic spline; diagnostic group and cultural interaction analyses.
-- Separate translation/qualitative pilot from cohort recruitment. Two independent assessors blinded to masked fear-related narrative adjudicate diagnosis-specific clinical events.
-- Follow-up options and T3/T6 safety contacts are described in the full protocol. OSF draft is a template, not a registration.
+- **Birincil sonuç:** Altıncı ay WHO-5 toplam skoru (0–100).
+- **Maruziyet:** Başlangıç FORP-MHQ / 10; `β₁` 10 FORP puanı başına ayarlanmış WHO-5 ortalama farkıdır.
+- **Örneklem:** Güç hesabı yaklaşık **560 gözlenen altıncı ay sonucuna** dayalıdır; %20 kayıp varsayımıyla **700** başlangıç katılımcısı hedeflenir. MI ana analizi daha çok başlangıç katılımcısının kısmen gözlenen verisini kullanabilir.
+- **Ana karıştırıcı seti:** Başlangıç WHO-5, PHQ-9, GAD-7, yaş, cinsiyet, tanı ailesi, log(1+hastalık süresi), epizod yükü, tedavi türü, remisyon ve varsa merkez.
+- **Kayıp veri birincil stratejisi:** MAR altında 40 MICE ataması, aynı OLS/HC3 modeli, Rubin birleştirme; tam-olgu, IPW ve MNAR delta (-5/-10/-15) duyarlılık.
+- **Keşifsel ikincil:** Önceden tanımlı 3 düğümlü restricted cubic spline; **ayrı güç hesabı yapılmadı**. Tanı/kültür alt grupları da keşifseldir.
+- **Klinik sonlanım:** WHO-5 özbildiriminden ayrı, tanıya özgü olay tanımları ve iki bağımsız kör psikiyatrist; notlardan nüks korkusu ve maruziyeti açığa çıkaran ifadeler maskelenir. Kontrole gelmeyenler izinli kayıt/güvenli iletişimle taranır.
+- **Aşamalar:** Ölçek izni, çeviri, bilişsel görüşme ve 30–40 kişilik pilot ana kohorttan ayrı; ardından prospektif kohort; nitel görüşme alt çalışması.
+- **Takip ve güvenlik:** Yüz yüze poliklinik, onamlı telefon veya kurum onaylı güvenli portal; tanı içeren SMS yok. T3/T6: 5 WHO-5 yanıtı + puanlamadan bağımsız 2 klinik risk sorusu; olumlu yanıt için aynı gün klinisyen değerlendirmesi.
 
-**Full 55-file ZIP archive** contains Turkish thesis draft (16 PDF pages), English study protocol (12 PDF pages), Turkish SAP (10 PDF pages), 22-slide defense deck, analytical scripts and appendices. Delivered directly in ChatGPT; the GitHub folder includes the version summary and reviewer response matrix.
+## Yalnız Ek A'daki yöntem simülasyonu
 
-## References
+| Kısmi R² varsayımı | Monte Carlo ile eşlenen β (WHO-5 / 10 FORP) |
+|---|---:|
+| 0,01 | −2,038 |
+| 0,02 | −2,908 |
 
-- Original measure: https://doi.org/10.1111/bjc.12536
-- 2023 review: https://doi.org/10.1016/j.cpr.2023.102342
-- Turkish WHO-5: https://doi.org/10.1017/S1463423619000343
-- WHO-5 systematic review: https://doi.org/10.1007/s12325-025-03266-9
-- Reporting: https://www.strobe-statement.org/checklists/
+Kalibrasyon katsayıları varsayılan WHO-5 artık SS=14 ve simüle FORP koşullu varyansına bağlıdır; **gerçek hasta bulgusu değildir**. Orijinal tam-olgu senaryosunda N=700 / gözlenen n≈560 için güç %89,6 (500 tekrar); tamamlayıcı MAR/MI yöntem-senaryosu %91,7 (300 tekrar, 15 atama), gerçek 40-atamalı analizin birebir simülasyonu **değildir**. WHO-5 için literatürdeki 10/100 puanlık eşik birey-içi değişim yorumudur, ayarlanmış kişiler-arası β için kanıtlanmış MCID değildir.
+
+## Belge seti
+
+31 Ekim 2026 tarihli **37 dosyalık tam ZIP** (Türkçe tez, İngilizce protokol, istatistik planı, ölçüm ve güvenlik ekleri, OSF taslağı, Word/PDF, 22 slayt PPTX, Monte Carlo kodu ve sonuçları) ChatGPT konuşmasında ayrıca teslim edilmiştir. Bu GitHub klasöründe sürüm özeti tutulur; ZIP içeriğinin tamamının buraya yüklendiği iddia edilmez.
+
+## Doğrulanmış ana kaynaklar
+
+1. FORP-MHQ: https://doi.org/10.1111/bjc.12536
+2. Nüks korkusu derlemesi: https://doi.org/10.1016/j.cpr.2023.102342
+3. WHO-5 Türkçe: https://doi.org/10.1017/S1463423619000343
+4. WHO WHO-5: https://www.who.int/publications/m/item/WHO-UCN-MSD-MHE-2024.01
+5. Guillemin: https://doi.org/10.1016/0895-4356(93)90142-N
+6. ITC: https://www.intestcom.org/files/guideline_test_adaptation_2ed.pdf

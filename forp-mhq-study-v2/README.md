@@ -1,33 +1,41 @@
-# Psychiatric relapse fear: thesis, manuscript and reproducible methods (version 2)
+# Fear of psychiatric recurrence: full thesis and journal article research package (v2)
 
-**Research simulation and methodological manuscript template.** There were no human participants, site recruitment, ethical approvals, or licensed Turkish FORP-MHQ translation. The generated associations cannot be represented as empirical clinical findings.
+**Status: computational demonstration and prerecruitment study protocol.** This is **not** a human-participant study. All records, associations, internal-consistency values, test-retest values, and follow-up outcomes in the Results are synthetic and **must not be presented as clinical evidence or as a completed Turkish validation.** No ethics approval, patient recruitment, patient interviews, or authorized Turkish adaptation of FORP-MHQ has occurred.
 
-## Expanded deliverables
-- `thesis/turkish_full.md`, `thesis/turkish_full.docx`, `thesis/turkish_full.pdf`: long-form specialist psychiatry thesis draft.
-- `manuscript/english_full.md`, `.docx`, `.pdf`: full international-journal-style English manuscript with abstract, rationale, reproducible methods, baseline and sensitivity tables, results, discussion and references.
-- `slides/defense_full.pptx` and `.pdf`: 35-slide white-background, 16:9 editable thesis-defense presentation.
-- `data/synthetic_cohort.csv`: generated, item-level records, no identifiable or clinical patient data.
-- `scripts/expanded_analysis.py`: analysis consistency checks, attrition weighting and pattern-mixture delta sensitivity.
-- `scripts/generate_and_analyze.py`: original seed-based synthetic data generator (original paths expect the original directory structure).
-- `scripts/ordinal_cfa.R`: unexecuted ordinal CFA template intended for authorized real translated scale responses.
-- `results/`: machine-generated and source-backed model coefficients, baseline descriptives, missingness and sensitivity outcomes.
-- `figures/`: baseline, cohort flow, attrition and model results.
+## Scientific question
 
-## Scientific interpretation
-The generator explicitly embeds a negative FORP contribution to six-month WHO-5. The estimated coefficient is therefore *not independent support* for the hypothesis. Current alpha/ICC summarize engineered ordinal item codes; they do not confer Turkish psychometric validity. No interview text or qualitative theme is attributed to patients. Before clinical use, secure permission, ethical approval, translation/cognitive debriefing, preregistered sample-size calculations and real prospectively collected measurements.
+Does baseline fear of psychiatric relapse explain six-month mental well-being beyond concurrent symptoms, and do individual perceptions of family support and mental-illness disclosure alter that relationship? The design combines transdiagnostic prospective measurement with psychometric translation and an embedded qualitative interview protocol for future real-world research.
 
-## Key demonstrator numbers
-- N=360 generated baseline records; 303 with 6-month outcomes; 57 without.
-- Adjusted regression per 10 FORP points: β=-2.135 (95% CI -3.974 to -0.296; p=0.0229).
-- Model ΔR²=0.01134. IPW estimate β=-2.133 (95% CI -3.973 to -0.292).
-- Ten-item alpha=0.948, retest ICC=0.954 in 65 generated pairs; not observed Turkish validation.
+## Source files stored here
 
-## Rebuild steps
-1. `python scripts/expanded_analysis.py` rebuilds expanded numeric summaries and figures from `data/synthetic_cohort.csv`.
-2. Read `manuscript/english_full.md` and `thesis/turkish_full.md` for the exact narrative, table interpretations and references.
-3. Install `python-docx`, `pandoc`, and LibreOffice if DOCX/PDF regeneration is needed.
-4. `python scripts/build_deck.py` creates editable 35-slide PPTX (requires python-pptx and matplotlib).
+- [English full manuscript](manuscript/english_full.md): introduction, literature, hypotheses, methods, baseline and regression results, MNAR sensitivity scenarios, discussion, declarations and 15 references.
+- [Turkish comprehensive thesis draft](thesis/turkish_full.md): clinical rationale, culture-sensitive sampling, statistical analysis, critical interpretation, appendices and references.
+- [Synthetic cohort](data/synthetic_cohort.csv): 360 generated anonymized-by-construction rows, baseline and two follow-ups; no patient records.
+- [Seeded data generator](scripts/generate_and_analyze.py): recreates synthetic participant-like records and initial analysis.
+- [Extended analysis](scripts/expanded_analysis.py): HC3 OLS, incremental R², VIF, attrition modeling, inverse-probability weights, pattern-mixture sensitivity analyses and CSV summaries.
+- [R ordinal CFA template](scripts/ordinal_cfa.R): **not executed**; requires a future, authorized and cognitively tested Turkish scale and real participant data.
+- [PowerPoint generation script](scripts/build_deck.py): recreates a 35-slide presentation with local dependencies.
+- [Numeric model audit](results/expanded_summary.json).
+- [Human-research and publication checklist](PROJECT_CHECKLIST.md).
 
-_Authorship, ethics, site permissions and declarations must be completed by actual researchers before human recruitment or external submission._
+## Delivered separately in the complete archive
 
-Full deliverables and numeric analysis are supplied as a versioned archive in the ChatGPT conversation. The repository description alone is not a completed empirical research manuscript.
+Publication-formatted PDF and DOCX versions of the manuscript and thesis, editable PowerPoint and slides PDF, charts, results CSVs, original references and document-generation helpers are included in the downloadable complete archive attached to the ChatGPT conversation. **They are not currently committed to this source-code branch.**
+
+## Reproduce
+
+Python 3.10+ dependencies: numpy, scipy, pandas, statsmodels, matplotlib, scikit-learn, python-pptx. Run from the repository folder:
+
+```bash
+python scripts/generate_and_analyze.py
+python scripts/expanded_analysis.py
+python scripts/build_deck.py
+```
+
+The generator has a fixed RNG seed (`20261031`); generated outputs are model-defined, not naturalistic observations. The main model specifically embeds a negative relationship between fear and future WHO-5, so rediscovering the parameter is **not hypothesis confirmation**. The questionnaire's original 10 item texts are not included to avoid implying permission to reproduce or translate it.
+
+## Replacing the simulation with real research
+
+Before any empirical thesis or manuscript submission: verify Turkish adaptation novelty; obtain the original instrument owner's authorization; seek ethics/clinical site permissions; translate and cognitively test wording; justify sample size and interactions; prospectively collect minimal-burden baseline and follow-ups; perform ordinal WLSMV CFA and ICC against a clinically stable repeat test sample; preregister the primary estimand; monitor attrition; conduct and transparently code consented qualitative interviews; and provide accurate author, funding and AI disclosures.
+
+This repository is a serious **study-design and document-production prototype**, not publishable original patient research as it stands.

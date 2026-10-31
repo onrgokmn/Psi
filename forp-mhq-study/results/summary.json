@@ -1,0 +1,48 @@
+{
+  "analysis_status": "SYNTHETIC / DEMONSTRATION ONLY",
+  "seed": 20261031,
+  "n_baseline": 360,
+  "n_followup_6m": 303,
+  "dropouts_6m": 57,
+  "followup_fraction": 0.842,
+  "age_mean": 42.1,
+  "age_sd": 12.7,
+  "female_n": 222,
+  "female_pct": 61.7,
+  "diagnosis_counts": {
+    "Depression": 122,
+    "Anxiety": 121,
+    "Bipolar": 47,
+    "OCD": 46,
+    "Other": 24
+  },
+  "forp_mean": 18.28,
+  "forp_sd": 11.15,
+  "who0_mean": 61.92,
+  "who6_mean_observed": 58.61,
+  "cronbach_alpha": 0.948,
+  "approx_omega_continuous": 0.948,
+  "icc_absolute_agreement": 0.954,
+  "n_retest": 65,
+  "primary_beta_per10": -2.135,
+  "primary_ci95": [
+    -3.974,
+    -0.296
+  ],
+  "primary_p": 0.02291147588576592,
+  "model_r2": 0.482,
+  "model_base_r2": 0.47,
+  "delta_r2": 0.0113,
+  "interaction_beta": -0.06,
+  "interaction_p": 0.9374590505060115,
+  "clinical_n": 51,
+  "clinical_rate": 16.8,
+  "clinical_or_per10": 2.349,
+  "clinical_or_ci95": [
+    1.587,
+    3.476
+  ],
+  "clinical_p": 1.9485779865037708e-05,
+  "cor_forp_phq": 0.331,
+  "restriction": "No human participants; hypothesis-driven generated variables; no ethics approval or real measurements."
+}

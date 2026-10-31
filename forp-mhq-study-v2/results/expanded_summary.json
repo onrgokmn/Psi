@@ -1,0 +1,190 @@
+{
+  "n_base": 360,
+  "n_obs": 303,
+  "follow_up_3m": 320,
+  "female_n": 222,
+  "age_mean": 42.13333333333333,
+  "age_sd": 12.691057979784015,
+  "forp_total": {
+    "n": 360,
+    "mean": 18.28,
+    "sd": 11.15,
+    "median": 18.0,
+    "q1": 9.0,
+    "q3": 28.0
+  },
+  "who5_baseline": {
+    "n": 360,
+    "mean": 61.92,
+    "sd": 17.8,
+    "median": 64.0,
+    "q1": 51.0,
+    "q3": 73.0
+  },
+  "who5_m3": {
+    "n": 320,
+    "mean": 59.1,
+    "sd": 18.01,
+    "median": 60.0,
+    "q1": 48.0,
+    "q3": 72.0
+  },
+  "who5_m6": {
+    "n": 303,
+    "mean": 58.61,
+    "sd": 17.64,
+    "median": 60.0,
+    "q1": 48.0,
+    "q3": 72.0
+  },
+  "phq4": {
+    "n": 360,
+    "mean": 4.23,
+    "sd": 2.17,
+    "median": 4.0,
+    "q1": 3.0,
+    "q3": 6.0
+  },
+  "mspss_family_mean": {
+    "n": 360,
+    "mean": 5.2,
+    "sd": 0.94,
+    "median": 5.25,
+    "q1": 4.5,
+    "q3": 6.0
+  },
+  "stigma_concern": {
+    "n": 360,
+    "mean": 2.15,
+    "sd": 1.09,
+    "median": 2.0,
+    "q1": 1.0,
+    "q3": 3.0
+  },
+  "dx_counts": {
+    "Depression": 122,
+    "Anxiety": 121,
+    "Bipolar": 47,
+    "OCD": 46,
+    "Other": 24
+  },
+  "consequence_counts": {
+    "Symptoms": 118,
+    "Work": 77,
+    "Autonomy": 65,
+    "Family": 50,
+    "Stigma": 35,
+    "Other": 15
+  },
+  "medication_prescribed_n": 301,
+  "mars_n": 301,
+  "clinical_deterioration_n": 51,
+  "attrition_by_dx": {
+    "Anxiety": {
+      "recruited": 121,
+      "followed": 98
+    },
+    "Bipolar": {
+      "recruited": 47,
+      "followed": 40
+    },
+    "Depression": {
+      "recruited": 122,
+      "followed": 100
+    },
+    "OCD": {
+      "recruited": 46,
+      "followed": 45
+    },
+    "Other": {
+      "recruited": 24,
+      "followed": 20
+    }
+  },
+  "attrition_diff": {
+    "age": 1.39,
+    "forp_total": -3.69,
+    "phq4": -0.77,
+    "who5_baseline": 5.12,
+    "mspss_family_mean": 0.15
+  },
+  "regression": {
+    "beta": -2.1347,
+    "CI": [
+      -3.9739,
+      -0.2955
+    ],
+    "p": 0.022911,
+    "r2": 0.4818,
+    "delta_r2": 0.01134,
+    "n": 303
+  },
+  "normality_y6_residual_test": {
+    "statistic": 0.261,
+    "p": 0.8777
+  },
+  "standardized_resid_max_abs": 3.035,
+  "max_vif": 1.57,
+  "spearman_forp_who6": -0.4748504128737823,
+  "spearman_forp_phq4": 0.3439988156828221,
+  "ipw": {
+    "beta": -2.133,
+    "CI": [
+      -3.973,
+      -0.292
+    ],
+    "p": 0.0231,
+    "weight_min": 1.008,
+    "weight_max": 1.86
+  },
+  "delta_sensitivity": [
+    {
+      "delta": -15,
+      "beta": -2.387,
+      "CI": [
+        -4.099,
+        -0.675
+      ]
+    },
+    {
+      "delta": -10,
+      "beta": -2.303,
+      "CI": [
+        -3.939,
+        -0.667
+      ]
+    },
+    {
+      "delta": -5,
+      "beta": -2.219,
+      "CI": [
+        -3.803,
+        -0.634
+      ]
+    },
+    {
+      "delta": 0,
+      "beta": -2.135,
+      "CI": [
+        -3.696,
+        -0.573
+      ]
+    },
+    {
+      "delta": 5,
+      "beta": -2.051,
+      "CI": [
+        -3.618,
+        -0.483
+      ]
+    },
+    {
+      "delta": 10,
+      "beta": -1.966,
+      "CI": [
+        -3.568,
+        -0.365
+      ]
+    }
+  ]
+}

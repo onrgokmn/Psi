@@ -1,29 +1,24 @@
-# FORP-TR V6 | Reviewer-response matrix
+# FORP-TR V6 | Updated reviewer responses
 
-This revision supersedes V5 research protocol. **No patient outcomes, ethics authorization, instrument translation permission or OSF registration are claimed.**
+The following changes are implemented in the **planned prospective research protocol**. The clinical project has not recruited participants and there are no observed human outcomes.
 
-| Reviewer request | V6 response |
+| Requested revision | Final V6 resolution |
 |---|---|
-| Power analyzable n | n≈560 six-month analyzable records after 700 enrolments and 20% attrition |
-| Partial R² to β mapping | At partial R²=.02, simulated β=-2.908 WHO-5 points per 10 FORP points, conditional on generator assumptions |
-| Meaningful WHO-5 difference | Historical 10-point 0–100 benchmark (Topp 2015); not universally validated MCID (Domenech 2025) |
-| Nonlinearity | 3-knot spline is a prespecified *exploratory secondary* analysis; **no separate power calculation performed** |
-| Follow-up contacts | In-person clinic, institution-approved secure portal/app, or consented private telephone; no diagnosis-bearing SMS |
-| Adjudication | Two independent clinicians; mask note passages revealing recurrence fear and exposure |
-| Nonattendance | Permitted clinical-record search and safe patient contact; unknown event status is not a non-event |
-| Missingness | Conditional complete-case HC3 primary under explicitly restrictive MAR assumptions and fully observed baseline; if baseline covariate missingness ≥2% or systematic, preregistered blinded amendment to primary MI. MI/IPW/MNAR sensitivity always |
-| Overadjustment | PHQ-9, GAD-7 and baseline WHO-5 construct overlap included in limitations; VIF alone insufficient |
-| Safety | T0 PHQ-9 item 9 + spontaneous concern triggers clinician review; WHO-5 at T3/T6 not a suicide screen; safety follow-up SOP |
-| Language | Proper Greek beta/delta and Turkish specialty-thesis term; standardized thesis headings |
-| Bibliography | 20 numbered verified references, including Coutts-Bain 2023, Eser 2019, ITC 2017 and Guillemin 1993 |
-| English citations | Repaired mixed-methods citation; Turkish-language PHQ-9 wording; canonical 2024 WHO-5 URL |
+| Power based on analyzable sample | Approximately **n=560 observed T6** after N=700 baseline with anticipated 20% loss |
+| Partial R²=.02 to WHO-5 units | Simulated **β≈−2.908 WHO-5/10 FORP**, conditional on residual SD and covariate distributions; Appendix A |
+| WHO-5 minimally important difference | Historical 10/100 **within-person** reference (Topp 2015) rather than a universally validated MCID (Domenech 2025); cannot be mapped directly onto between-person slope |
+| Spline | Three knots; pre-specified **exploratory secondary**, **not separately powered** |
+| Contact preferences | In-person clinic, consented private telephone, institution-approved secure portal; avoid diagnosis-bearing SMS |
+| Blind clinical relapse outcome | Independent assessors receive masked notes, including concealment of fear/scale language; clinical records retained |
+| Nonattendance ascertainment | Patient permission-based record review and remote contact; unconfirmed events are not set to zero |
+| Missing data | **Primary 40-imputation MICE under MAR**; complete-case HC3, IPW, and MNAR delta-pattern sensitivity; approximate MI power check separate from original complete-case MC |
+| Overadjustment | PHQ-9, GAD-7, baseline WHO-5 overlap and treatment confounding acknowledged |
+| T3/T6 safety | WHO-5 plus two brief clinical safety prompts, same-day clinician escalation when indicated |
+| Thesis typography | β, Δ, R², headings and table formats standardized |
+| Thesis status | Tıpta uzmanlık research proposal; no Q1 acceptance claim |
+| Main references | Coutts-Bain 2023, Eser 2019, ITC 2017, Guillemin 1993, Topp 2015, Domenech 2025 verified in numbered reference lists |
+| English citations | Context-matched citations, Turkish-language PHQ-9 wording and canonical WHO-5 2024 URL |
 
-**Complete versioned DOCX/PDF, 22-slide presentation and executable power script:** distributed in the V6 project archive. Patient-level clinical results must never be represented as observed before actual recruitment.
+**The primary protocol is fixed before recruitment only upon actual dated OSF registration.** GitHub is not a substitute. Design simulations are kept in Appendix A, not clinical Results.
 
-## Essential sources
-- https://doi.org/10.1016/j.cpr.2023.102342
-- https://doi.org/10.1111/bjc.12536
-- https://doi.org/10.1017/S1463423619000343
-- https://doi.org/10.1159/000376585
-- https://doi.org/10.1007/s12325-025-03266-9
-- https://www.who.int/publications/m/item/WHO-UCN-MSD-MHE-2024.01
+Sources: https://doi.org/10.1111/bjc.12536 · https://doi.org/10.1007/s12325-025-03266-9 · https://www.intestcom.org/files/guideline_test_adaptation_2ed.pdf
